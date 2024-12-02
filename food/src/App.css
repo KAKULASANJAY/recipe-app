@@ -1,0 +1,183 @@
+/* Add this to the body for a gradient background */
+body {
+  background: linear-gradient(135deg, #ff6347, #ff4500); /* Gradient from tomato to dark orange */
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* Recipe Card */
+.recipe {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+/* Styling for the recipe items */
+.recipe {
+  margin: 20px;
+  text-align: center;
+}
+
+.recipe h5 {
+  margin: 10px 0;
+  color: #333; /* Dark color for the text */
+}
+
+
+.recipe:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  background-color: #fffae5; /* Light yellow background on hover */
+}
+
+.recipe img {
+  width: 100%;
+  height: auto;
+  max-width: 200px; /* Set a maximum width */
+  max-height: 150px; /* Set a maximum height */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px; /* Optional: to give the images rounded corners */
+}
+
+.recipe img:hover {
+  transform: scale(1.05);
+}
+/* Form Inputs */
+input[type="text"],
+input[type="submit"] {
+  border-radius: 25px;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: 2px solid #ff6347;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Input Focus */
+input[type="text"]:focus {
+  border-color: #ff4500;
+}
+
+/* Submit Button Hover Effect */
+input[type="submit"]:hover {
+  background-color: #ff4500;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Add an animated text effect to the header */
+h4 {
+  color: #ff6347;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Loader (spinner) */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #ff6347;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.app-container {
+  padding: 30px;
+  width: 80%;
+  max-width: 1200px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+  .recipe-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe {
+    width: 80%;
+  }
+
+  input[type="text"] {
+    width: 70%;
+  }
+
+  input[type="submit"] {
+    width: 70%;
+  }
+}
+/* Styling for the footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+}
+/* Fixed Footer */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.app-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+.footer p {
+  margin: 0;
+}
